@@ -28,6 +28,8 @@ export class SharingService {
           }
         },
         (err: HttpErrorResponse) => {
+          console.log(err);
+
           if (
             err.error.message == 'jwt expired' ||
             err.error.message == 'jwt malformed'
@@ -43,6 +45,8 @@ export class SharingService {
   updateProducts() {
     this.ProductsService.getProducts().subscribe((data:any)=>{
       this.products.next(data.products);
+    },
+    (err: HttpErrorResponse) => {console.log(err);
     })
   }
 

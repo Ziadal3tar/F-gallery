@@ -5,14 +5,14 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductsService {
-  private baseUrl = 'gallery-apis-delta.vercel.app/product';
+  private baseUrl = 'https://gallery-apis-delta.vercel.app/product';
   // private baseUrl = 'http://localhost:3000/product';
 
   constructor(private HttpClient:HttpClient) { }
   add(data:any){
     return this.HttpClient.post(`${this.baseUrl}/add`, data);
   }
-  getProducts(){
+  getProducts():any{
     return this.HttpClient.get(`${this.baseUrl}/getProducts`);
   }
   getProduct(id:any){

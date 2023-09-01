@@ -17,9 +17,7 @@ export class HomeComponent {
   userData:any
   sended:Boolean = false
 
-  text = 'أحمد الزهراني';
-  name = 'أحمد الزهراني';
-  job = 'فنان تشكيلي';
+
   carouselOptions = {
     items: 3,
     dots: true,
