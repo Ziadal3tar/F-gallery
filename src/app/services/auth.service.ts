@@ -6,9 +6,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  private baseUrl = 'https://gallery-apis-delta.vercel.app/auth';
+  // private baseUrl = 'https://gallery-apis-delta.vercel.app/auth';
 
-  // private baseUrl = 'http://localhost:3000/auth';
+  private baseUrl = 'http://localhost:3000/auth';
   constructor(private HttpClient:HttpClient) { }
   signUp(data: any): any {
       return this.HttpClient.post(`${this.baseUrl}/signUp`, data);
